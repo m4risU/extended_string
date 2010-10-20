@@ -1,119 +1,119 @@
 = extended_string
 
-Intention for this gem is to follow step by step how to create the very gem from the scratch. It will add one method to
+ Intention for this gem is to follow step by step how to create the very gem from the scratch. It will add one method to
 standard String class. I intend to put some tests, release couple of versions, and so on...
 
 == Preconfig
 
 === Install Rails
 
-I do prefer using rvm for this task, but it can be done as it is. If you know how to use rvm, then you will not
-need any guidance.
+ I do prefer using rvm for this task, but it can be done as it is. If you know how to use rvm, then you will not
+ need any guidance.
 
-gem install rails --no-ri --no-rdoc
-gem install jeweler
+ gem install rails --no-ri --no-rdoc
+ gem install jeweler
 
-Currently I'm working on version 3.0.1
+ Currently I'm working on version 3.0.1
 
 === Configure Git
-You need to configure some git settings, before you use jeweler to create first gem.
+ You need to configure some git settings, before you use jeweler to create first gem.
 
-git config --global github.user m4risU
-git config --global github.token 227addfh048cgfbbda2060dc8e9233a6 (don't worry, this is not my key, but you have
-to use yours)
-Probably you will find it in here:
+ git config --global github.user m4risU
+ git config --global github.token 227addfh048cgfbbda2060dc8e9233a6 (don't worry, this is not my key, but you have
+ to use yours)
+ Probably you will find it in here:
 
 https://github.com/account in Account Admin
 
 === Generate the gem project
 
-jeveler enhanced_string
+ jeveler enhanced_string
 
-Good. We are here! What can we do next?
+ Good. We are here! What can we do next?
 
 === Rake tasks
 
-As I already know, rake tasks will be the key to build the gem. so lets try
+ As I already know, rake tasks will be the key to build the gem. so lets try
 
-rake -T
+ rake -T
 
-It will give the following
+ It will give the following
 
-rake build                           # Build gem
-rake check_dependencies              # Check that runtime and development d...
-rake check_dependencies:development  # Check that development dependencies ...
-rake check_dependencies:runtime      # Check that runtime dependencies are ...
-rake clobber_rdoc                    # Remove rdoc products
-rake gemcutter:release               # Release gem to Gemcutter
-rake gemspec                         # Generate and validates gemspec
-rake gemspec:debug                   # Display the gemspec for debugging pu...
-rake gemspec:generate                # Generates the gemspec, using version...
-rake gemspec:validate                # Validates the gemspec
-rake git:release                     # Tag a release in Git
-rake github:release                  # Release Gem to GitHub
-rake install                         # Install gem using sudo
-rake rdoc                            # Build the rdoc HTML Files
-rake release                         # Release gem
-rake rerdoc                          # Force a rebuild of the RDOC files
-rake test                            # Run tests
-rake version                         # Displays the current version
-rake version:bump:major              # Bump the gemspec by a major version.
-rake version:bump:minor              # Bump the gemspec by a minor version.
-rake version:bump:patch              # Bump the gemspec by a patch version.
-rake version:write                   # Writes out an explicit version.
+ rake build                           # Build gem
+ rake check_dependencies              # Check that runtime and development d...
+ rake check_dependencies:development  # Check that development dependencies ...
+ rake check_dependencies:runtime      # Check that runtime dependencies are ...
+ rake clobber_rdoc                    # Remove rdoc products
+ rake gemcutter:release               # Release gem to Gemcutter
+ rake gemspec                         # Generate and validates gemspec
+ rake gemspec:debug                   # Display the gemspec for debugging pu...
+ rake gemspec:generate                # Generates the gemspec, using version...
+ rake gemspec:validate                # Validates the gemspec
+ rake git:release                     # Tag a release in Git
+ rake github:release                  # Release Gem to GitHub
+ rake install                         # Install gem using sudo
+ rake rdoc                            # Build the rdoc HTML Files
+ rake release                         # Release gem
+ rake rerdoc                          # Force a rebuild of the RDOC files
+ rake test                            # Run tests
+ rake version                         # Displays the current version
+ rake version:bump:major              # Bump the gemspec by a major version.
+ rake version:bump:minor              # Bump the gemspec by a minor version.
+ rake version:bump:patch              # Bump the gemspec by a patch version.
+ rake version:write                   # Writes out an explicit version.
 
 === Install the gem locally
 
-To do this we need to write the very first version.
+ To do this we need to write the very first version.
 
-rake version:write MAJOR=0 MINOR=1 PATCH=0
+ rake version:write MAJOR=0 MINOR=1 PATCH=0
 
-and after that
+ and after that
 
-rake install
+ rake install
 
 === First issues
 
-After previous line I run into following problem:
+ After previous line I run into following problem:
 
-"FIXME" or "TODO" is not a description
+ "FIXME" or "TODO" is not a description
 
-Oh, yes! I didn't look carefully on Rakefile file.
+ Oh, yes! I didn't look carefully on Rakefile file.
 
-There was auot generated line: s.description = %q{TODO: longer description of your gem}
-You know how to fix it I hope :)
+ There was auot generated line: s.description = %q{TODO: longer description of your gem}
+ You know how to fix it I hope :)
 
 === RVM and system rubies
 
-When using rvm, it is enough, but in other cases, it is possible you will need to use
+ When using rvm, it is enough, but in other cases, it is possible you will need to use
 
-sudo rake install
+ sudo rake install
 
-Just remember about that.
+ Just remember about that.
 
 === I'm ready!
 
-You want to get the world amazed with your work? Try this!
+ You want to get the world amazed with your work? Try this!
 
-rake release
+ rake release
 
 === Project do not exist yet on github?
 
-Ok, How to start with it?
-I simply went to my git account and created project extended_string, then From command line after commits to local repo
+ Ok, How to start with it?
+ I simply went to my git account and created project extended_string, then From command line after commits to local repo
 
-git push origin master
+ git push origin master
 
 === Test my work with rvm
 
->rvm install ree
->rvm --create ree@foo
+ rvm install ree
+ rvm --create ree@foo
 
-I will not worry about this gemset, but I want to check if I can install my gem from gems.
+ I will not worry about this gemset, but I want to check if I can install my gem from gems.
 
-I got after following
-> gem install extended_string
-ERROR:  Could not find a valid gem 'extended_string' (>= 0) in any repository
+ I got after following
+ gem install extended_string
+ ERROR:  Could not find a valid gem 'extended_string' (>= 0) in any repository
 
 === References
 
