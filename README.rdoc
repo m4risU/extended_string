@@ -104,6 +104,17 @@ I simply went to my git account and created project extended_string, then From c
 
 git push origin master
 
+=== Test my work with rvm
+
+>rvm install ree
+>rvm --create ree@foo
+
+I will not worry about this gemset, but I want to check if I can install my gem from gems.
+
+I got after following
+> gem install extended_string
+ERROR:  Could not find a valid gem 'extended_string' (>= 0) in any repository
+
 === References
 
 http://github.com/technicalpickles/jeweler
