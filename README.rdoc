@@ -97,6 +97,16 @@ You want to get the world amazed with your work? Try this!
 
 rake release
 
+=== Project do not exist yet on github?
+
+Ok, How to start with it?
+I simply went to my git account and created project extended_string, then From command line after commits to local repo
+
+git push origin master
+
+=== References
+
+http://github.com/technicalpickles/jeweler
 
 == Note on Patches/Pull Requests
  
