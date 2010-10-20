@@ -78,10 +78,25 @@ After previous line I run into following problem:
 
 "FIXME" or "TODO" is not a description
 
-Oh, yes! I didn't look at all on .gemspec file.
+Oh, yes! I didn't look carefully on Rakefile file.
 
 There was auot generated line: s.description = %q{TODO: longer description of your gem}
 You know how to fix it I hope :)
+
+=== RVM and system rubies
+
+When using rvm, it is enough, but in other cases, it is possible you will need to use
+
+sudo rake install
+
+Just remember about that.
+
+=== I'm ready!
+
+You want to get the world amazed with your work? Try this!
+
+rake release
+
 
 == Note on Patches/Pull Requests
  
