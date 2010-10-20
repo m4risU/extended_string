@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{extended_string}
-  s.version = "0.1.2"
+  s.version = "0.1.3"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Mariusz Wyroz\304\231bski"]
-  s.date = %q{2010-10-20}
+  s.date = %q{2010-10-21}
   s.description = %q{Extends your standard String class}
   s.email = %q{mariuszwyrozebski@gmail.com}
   s.extra_rdoc_files = [
@@ -23,6 +23,7 @@ Gem::Specification.new do |s|
      "README.rdoc",
      "Rakefile",
      "VERSION",
+     "extended_string.gemspec",
      "lib/extended_string.rb",
      "test/helper.rb",
      "test/test_extended_string.rb"
