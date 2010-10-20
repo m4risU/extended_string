@@ -6,7 +6,7 @@ begin
   Jeweler::Tasks.new do |gem|
     gem.name = "extended_string"
     gem.summary = %Q{Extends your standard String class}
-    gem.description = %Q{Extends your standard String class}
+    gem.description = %Q{Extends your standard String class, Adds leet method that does the leet talk}
     gem.email = "mariuszwyrozebski@gmail.com"
     gem.homepage = "http://github.com/m4risU/extended_string"
     gem.authors = ["Mariusz Wyrozębski"]
