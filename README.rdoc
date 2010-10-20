@@ -119,6 +119,18 @@ ERROR:  Could not find a valid gem 'extended_string' (>= 0) in any repository
 
 http://github.com/technicalpickles/jeweler
 
+== Instalation notes
+
+Rails 3.0
+
+in your Gemfile
+
+gem "extended_string"
+
+== Usage
+
+"string".leet will give you "57ring"
+
 == Note on Patches/Pull Requests
  
 * Fork the project.
